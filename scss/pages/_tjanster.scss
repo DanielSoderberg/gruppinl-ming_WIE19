@@ -1,0 +1,319 @@
+.servicesidan {
+  background: $color-primary-dark;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.headline {
+  font-family: "Roboto", sans-serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+.secondary-color {
+  color: #8eee8e;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.bg-image {
+  background-image: url("/Images/laptop.jpg");
+}
+
+/*Priskort med köpknapp*/
+.pricing-table {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-transform: uppercase;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 33%;
+  padding: 10px;
+  max-width: 320px;
+}
+
+.table {
+  background: #fff;
+  padding: 33px 16px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00000070;
+}
+
+.table h2 {
+  text-transform: uppercase;
+  color: #aad6c0;
+}
+
+.table ul {
+  margin: 0;
+  padding: 0;
+}
+
+.table ul li {
+  padding: 10px 0;
+  list-style: none;
+  color: black;
+}
+
+.price {
+  font-size: 6rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-family: Impact, sans-serif;
+  color: #34403a;
+}
+
+.price span {
+  display: block;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+.table a {
+  text-decoration: none;
+  display: block;
+  color: #2c3e50;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  transition: 0.5s linear;
+  border-radius: 25px;
+}
+
+.table a:hover {
+  background: #00c900;
+  color: #fff;
+}
+
+.table:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  z-index: 6;
+}
+
+.bigseller {
+  background: #00c900;
+  color: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  padding: 8px 38px;
+  top: 16px;
+  right: -36px;
+}
+
+/*Rutor till övriga tjänster*/
+.serviceboxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  padding: 3rem;
+}
+
+.servicebox {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 20px 60px;
+  background: White;
+  height: 100px;
+  text-align: center;
+  color: black;
+  padding: 1.2rem 2rem;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.servicebox i {
+  color: #8eee8e;
+}
+
+@media screen and (max-width: 980px) {
+  .col {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .col {
+    flex: 100%;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 1em 0;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.btn {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  background-color: #00c900;
+  padding: 10px 0;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  transition: 0.5s linear;
+  width: 20%;
+  margin: auto;
+}
+
+.btn:hover {
+  background: $color-primary-dark;
+  color: #fff;
+}
+
+/* Header tjänster */
+#showcase {
+  min-height: 600px;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background-image: url("/Images/laptop2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 600px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+  padding: 1 1.5em;
+}
+
+/* Section A */
+#section-a {
+  background: #eaeaea;
+  color: black;
+  padding-bottom: 2em;
+}
+
+/* Section B */
+#section-b {
+  padding: 1em 1em 1em;
+}
+
+#section-b ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#section-b li {
+  margin-bottom: 1em;
+  background: #fff;
+  color: $color-primary-dark;
+}
+
+#section-b li:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  z-index: 6;
+}
+
+.card-content {
+  padding: 1.5em;
+}
+
+/* Section C */
+#section-c {
+  background: #fff;
+  color: #333;
+  padding: 2em;
+}
+
+/* Section D / Boxes */
+#section-d .box {
+  padding: 2em;
+  color: #fff;
+}
+
+#section-d .box:first-child {
+  background: #00c900;
+}
+
+.content-wrap-2 {
+  background: #fff;
+  color: #333;
+  padding: 5em;
+}
+
+/* Footer */
+#main-footer {
+  padding: 2em;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+#main-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+  #section-a .content-text {
+    columns: 2;
+    column-gap: 2em;
+  }
+  #section-a .content-text p {
+    padding-top: 0;
+  }
+  .content-wrap,
+  #section-b ul {
+    grid-column: 2/4;
+  }
+  .box,
+  #main-footer div {
+    grid-column: span 2;
+  }
+  #section-b ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
