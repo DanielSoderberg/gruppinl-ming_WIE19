@@ -1,4 +1,69 @@
 @charset "UTF-8";
+/* The container */
+.checkbox-container {
+  align-self: center;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 3.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+/* Create a custom checkbox */
+.checkmark {
+  align-self: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 20%;
+  background-color: #858585;
+  padding: 25px 25px 25px 25px;
+  border: 4px solid black;
+  border-radius: 10px; }
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc; }
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #00c900; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  align-self: center;
+  left: 18px;
+  top: 8px;
+  width: 10px;
+  height: 25px;
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
 .footer {
   flex-shrink: 0;
   /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
@@ -147,12 +212,123 @@ nav {
     transform: scale(1);
     opacity: 1; } }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.faktura_main {
+  position: relative;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+  color: #34403a;
+  background: #e8e8e8;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-family: Arial; }
+
+header {
+  padding: 10px 0;
+  margin-bottom: 30px; }
+
+#logo {
+  text-align: left;
+  margin-bottom: 0px; }
+
+#logo img {
+  width: 200px; }
+
+.faktura_h1 {
+  border-top: 1px solid #5d6975;
+  border-bottom: 1px solid #5d6975;
+  color: whitesmoke;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+  background-color: #34403a; }
+
+#project {
+  float: left; }
+
+#project span {
+  color: #5d6975;
+  text-align: right;
+  width: 52px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 0.8em; }
+
+#company {
+  float: right;
+  text-align: right; }
+
+#project div,
+#company div {
+  white-space: nowrap; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px; }
+
+table tr:nth-child(2n-1) td {
+  background: #f5f5f5; }
+
+table th,
+table td {
+  text-align: center; }
+
+table th {
+  padding: 5px 20px;
+  color: #5d6975;
+  border-bottom: 1px solid #c1ced9;
+  white-space: nowrap;
+  font-weight: normal; }
+
+table .service,
+table .desc {
+  text-align: left; }
+
+table td {
+  padding: 20px;
+  text-align: right; }
+
+table td.service,
+table td.desc {
+  vertical-align: top; }
+
+table td.unit,
+table td.qty,
+table td.total {
+  font-size: 1.2em; }
+
+table td.grand {
+  border-top: 1px solid #5d6975; }
+
+#notices .notice {
+  color: #5d6975;
+  font-size: 1.2em; }
+
+footer {
+  color: #5d6975;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #c1ced9;
+  padding: 8px 0;
+  text-align: center; }
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
   background: url(bakgrund.jpg);
-  background-sized: cover; }
+  background-size: cover; }
 
 .title {
   margin-top: 100px;
@@ -471,20 +647,138 @@ p {
     justify-content: space-around; } }
 
 .kassa-container {
-  margin-top: 100px;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  padding-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 100vh;
   background: grey;
   display: grid;
-  grid-template-columns: 15% 15% 15% 30%;
-  grid-template-rows: auto;
-  grid-column-gap: 2.5%; }
+  grid-template-columns: 20% 20% 20% 32%;
+  grid-template-rows: 10% 25% 10% 10% 10% 15%;
+  grid-column-gap: 2.5%;
+  grid-row-gap: 2.5%; }
+  .kassa-container .top-box {
+    background: burlywood;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; }
   .kassa-container .row-1 {
-    background: blue; }
+    cursor: pointer;
+    background: #b1b1ff;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3; }
   .kassa-container .row-2 {
-    background: red; }
+    cursor: pointer;
+    background: #f79b9b;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; }
   .kassa-container .row-3 {
-    background: yellow; }
+    cursor: pointer;
+    background: #fcfca8;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3; }
   .kassa-container .row-4 {
-    background: green; }
+    display: grid;
+    grid-template-rows: 5% 10% 10% 30% 10% 10%;
+    grid-row-gap: 3%;
+    background: whitesmoke;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 7; }
+    .kassa-container .row-4 .cart-1 {
+      background: #ffa9a9; }
+    .kassa-container .row-4 .cart-2 {
+      background: #ffd8de; }
+    .kassa-container .row-4 .cart-3 {
+      background: #ffb6ff; }
+    .kassa-container .row-4 .cart-4 {
+      background: #ffbaa0; }
+    .kassa-container .row-4 .cart-5 {
+      background: #979797; }
+  .kassa-container .checkbox-1 {
+    background: whitesmoke;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4; }
+  .kassa-container .checkbutton-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-self: center;
+    padding-left: 15%; }
+  .kassa-container .checkbox-2 {
+    background: whitesmoke;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+  .kassa-container .checkbutton-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-self: center;
+    padding-left: 15%; }
+  .kassa-container .checkbox-3 {
+    background: whitesmoke;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6; }
+  .kassa-container .checkbutton-3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    align-self: center;
+    padding-left: 15%; }
+
+@media screen and (max-width: 900px) {
+  .kassa-container {
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 100vh;
+    background: grey;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 4% 12% 8% 8% 8% 50%;
+    grid-column-gap: 2.5%;
+    grid-row-gap: 2.5%; }
+    .kassa-container .row-4 {
+      display: grid;
+      grid-template-rows: 10% 10% 10% 30% 10% 10%;
+      grid-row-gap: 2%;
+      background: whitesmoke;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 6;
+      grid-row-end: 7;
+      text-align: left; }
+      .kassa-container .row-4 .cart-1 {
+        background: #ffa9a9; }
+      .kassa-container .row-4 .cart-2 {
+        background: #ffd8de; }
+      .kassa-container .row-4 .cart-3 {
+        background: #ffb6ff; }
+      .kassa-container .row-4 .cart-4 {
+        background: #ffbaa0; }
+      .kassa-container .row-4 .cart-5 {
+        background: #979797; } }
 
 .offer-boxes {
   display: grid;
@@ -502,7 +796,8 @@ p {
   height: 100px;
   text-align: center;
   color: black;
-  padding: 1.2rem 2rem; }
+  padding: 1.2rem 2rem;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); }
 
 .offerbox:hover {
   background: #0f7a0f;

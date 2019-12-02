@@ -317,3 +317,163 @@ p {
     justify-content: space-around;
   }
 }
+
+/* Beställningsinfo kassasidan*/
+.kassa-container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 200px auto auto auto;
+  grid-template-columns: minmax(160px 160px 160px auto);
+  grid-gap: 20px;
+  background-color: rgb(212, 247, 160);
+  padding: 30px;
+  height: 150vh;
+  margin-top: 70px;
+
+  grid-template-areas:
+    "order order order side"
+    "offer-1 offer-2 offer-3 side"
+    "offerings offerings offerings side"
+    "offerings offerings offerings side"
+    "foot foot foot side";
+}
+
+.orderbox {
+  grid-area: order;
+  background-color: rgb(233, 174, 13);
+  color: black;
+  padding: 10px;
+}
+
+.orderlist {
+  grid-area: order;
+  color: black;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.pricebar {
+  grid-area: side;
+  background-color: rgba(5, 114, 2, 0.678);
+  padding: 10px;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.offerbox-1 {
+  grid-area: offer-1;
+  background-color: #00c900;
+  padding: 10px;
+  min-height: 160;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  line-height: 0.7;
+  text-transform: uppercase;
+}
+.offerbox-2 {
+  grid-area: offer-2;
+  background-color: rgba(205, 247, 204, 0.89);
+  padding: 10px;
+  min-height: 160;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  line-height: 0.7;
+  text-transform: uppercase;
+}
+.offerbox-3 {
+  grid-area: offer-3;
+  background-color: #00c900;
+  padding: 10px;
+  min-height: 160;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  line-height: 0.7;
+  text-transform: uppercase;
+}
+.offerbox i {
+  color: #8eee8e;
+}
+
+.offerbox-1:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  +-ms-transform: scale(1.05);
+  background-color: rgba(205, 247, 204, 0.89);
+}
+
+.offerbox-2:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  +-ms-transform: scale(1.05);
+  background-color: #55545;
+}
+.offerbox-3:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  +-ms-transform: scale(1.05);
+  background-color: rgba(205, 247, 204, 0.89);
+}
+
+.offer-price {
+  font-size: 1.5rem;
+  align-content: center;
+  font-family: Impact, sans-serif;
+  color: #787e7b;
+}
+.offer-pg {
+  font-size: 1rem;
+  align-content: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+.kassaorder {
+  list-style: none;
+  color: black;
+}
+
+.foot {
+  grid-area: foot;
+  width: 100%;
+  background-color: rgba(8, 8, 8, 0.89);
+  padding: 10px;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+/*Rutor för att kryssa i extratjänster*/
+.offerings {
+  grid-area: offerings;
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+  background-color: rgba(187, 248, 187, 0.89);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+.offerings-rows {
+  grid-gap: 10px;
+  background-color: rgb(190, 190, 190);
+  border-radius: 3px;
+  justify-content: right;
+  padding: 5px;
+}
+
+.largerCheckbox {
+  width: 35px;
+  height: 35px;
+  border: 1px solid green;
+  border-radius: 3px;
+}
+
+input.largerCheckbox {
+  width: 35px;
+  height: 35px;
+  border: 1px solid green;
+  border-radius: 3px;
+}

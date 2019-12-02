@@ -1,3 +1,4 @@
+//Hamburger menu
 let open = document.getElementById("hamburger");
 let changeIcon = true;
 
