@@ -5,16 +5,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://kit.fontawesome.com/f408ae8ab6.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Electrolize|Orbitron&display=swap" rel="stylesheet">
   <script src="/Js/kassa.js"></script>
   <link rel="stylesheet" href="/css/styles.css" />
   <title>Tjänster</title>
 </head>
 
 <body class="servicesidan">
+    <header>
+        <div class="menu-toggle-container">
+          <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+          <nav>
+            <img class="brand" src="/Images/logo2.png" alt="logo" />
+            <ul>
+              <li><a href="/index.html">Hem</a></li>
+              <li><a href="tjanster.html">Tjänster</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
   <header id="showcase" class="grid">
     <div class="bg-image"></div>
     <div class="content-wrap">
@@ -26,7 +43,7 @@ secondary-color"> webb</span>
         som gör ditt liv som e-handlare lättare. Med KirunaHosting som värd
         kan du alltid känna dig trygg och få ut det bästa av din webbplats.
       </p>
-      <a href="#section-b" class="btn">Läs mer</a>
+      <a href="#section-b" class="button32">Läs mer</a>
     </div>
   </header>
 
@@ -38,7 +55,8 @@ secondary-color"> webb</span>
         <div class="content-text">
           <p>
             KirunaHosting erbjuder effektivitet med vår plattform skapad för
-            höga hastigheter. Gå med i vårt snabbväxande och glada community
+            höga hastigheter. Vi hjälper dig att komma igång med din e-handel. Gå med i vårt snabbväxande och glada
+            community
             och tjäna ännu mer. Med datainsamling från flera kontinenter,
             anpassad routing och serveroptimering har din webbplats aldrig
             varit mer tillgänglig. Vi finns här för dig när allt händer på
@@ -61,7 +79,7 @@ secondary-color"> webb</span>
             <li><strong>1 </strong> domännamn</li>
             <li><strong>Veckovis </strong> backup</li>
           </ul>
-          <a href="#">Beställ nu</a>
+          <input type="submit" value="Beställ nu" id="btn-bas">Beställ nu</input>
         </div>
       </div>
       <div class="col">
@@ -77,7 +95,7 @@ secondary-color"> webb</span>
             <li><strong>3 </strong> domännamn</li>
             <li><strong>Daglig </strong> backup</li>
           </ul>
-          <a href="#">Beställ nu</a>
+          <button id="btn-medium">Beställ nu</button>
         </div>
       </div>
       <div class="col">
@@ -92,7 +110,7 @@ secondary-color"> webb</span>
             <li><strong>30 </strong>domännamn</li>
             <li><strong>Dygnet-runt </strong>backup</li>
           </ul>
-          <a href="#">Beställ nu</a>
+          <button id="btn-lyx">Beställ nu</button>
         </div>
       </div>
     </section>
@@ -192,7 +210,7 @@ secondary-color"> webb</span>
               Så om du har
               ett problem, tveka inte att ta kontakt med oss!</p></span>
 
-            <a href="kontakt.html" class="btn">Kontakta oss</a>
+            <a href="kontakt.html" class="button32">Kontakta oss</a>
   </main>
 
 
@@ -264,7 +282,7 @@ secondary-color"> webb</span>
       <h3>Mobila lösningar</h3>
     </div>
     <div class="servicebox">
-      <i class="fas fa-store fa-4x"></i>
+      <i class="fas fa-shopping-cart fa-4x"></i>
       <h3>E-handel</h3>
     </div>
     <div class="servicebox">

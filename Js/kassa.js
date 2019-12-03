@@ -1,8 +1,10 @@
-const btn = document.getElementById("basic-btn");
-const data = 100; 
-btn.addEventListener = ('click') () => {
-   console.log(data)
+var addToCartButtons = document.getElementsByClassName("shop-item-button");
+for (var i = 0; i < addToCartButtons.length; i++) {
+  var button = addToCartButtons[i];
+  button.addEventListener("click", addToCartClicked);
 }
+const data = 100;
+
 //   localStorage.setItem("data", data);
 //  window.document.location = "./HTML/faktura.html";
 // // });
@@ -19,21 +21,29 @@ btn.addEventListener = ('click') () => {
 //     ShowData();
 // })
 
-
-
 // --KNAPP SOM RÄKNAR -- //
 
 // <input type="number" name="" id="produkt" placeholder="Ange produktpris">
 // <input type="number" name="" id="moms" placeholder="Ange moms procent">
-// <button class="rakna">Räkna</button> 
+// <button class="rakna">Räkna</button>
 
+// document.querySelector("li").innerHTML="Ny lista";
+// document.querySelector("li").textContent="Nytt värde";
 
+// function räknaKostnad() {
+// const Produkt = document.querySelector("#produkt").value;
+// const Moms = document.querySelector("#moms").value;
 
+//console.log(Number(Produkt+Produkt*Moms));
+// return Produkt+Produkt*Moms
+// }
 
+//const Produkt1 = räknaKostnad(1000,.25);
+//const Produkt2 = räknaKostnad(2000,.25);
+//console.log("total kostnad:" + (Produkt1+Produkt2));
 
-
-
-
+// const btn1 = document.querySelector(".rakna");
+// btn1.addEventListener("click", räknaKostnad)
 
 // //gör en funktion som räknar moms
 // function räknaMoms(varupris) {
