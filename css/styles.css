@@ -64,11 +64,149 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-.footer {
-  flex-shrink: 0;
-  /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding-top: 2000px; }
+/* footer */
+.footer-distributed {
+  background: black;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 40px; }
 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top; }
+
+/* Footer left */
+.footer-distributed .footer-left {
+  width: 40%;
+  background: black; }
+
+.footer-distributed h3 {
+  color: white;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+  background: black; }
+
+.footer-distributed h3 span {
+  color: limegreen;
+  background: black; }
+
+/* Footer links */
+.footer-distributed .footer-links {
+  color: green;
+  margin: 20px 0 12px;
+  padding: 0;
+  background: black; }
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  background: black; }
+
+.footer-distributed .footer-company-name {
+  color: white;
+  font-size: 9px;
+  font-weight: normal;
+  margin: 0;
+  background: black; }
+
+/* Footer Center */
+.footer-distributed .footer-center {
+  width: 35%; }
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: white;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+  background: black; }
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+  background: black; }
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: white;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+  background: black; }
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2; }
+
+.footer-distributed .footer-center p a {
+  color: limegreen;
+  text-decoration: none;
+  background: black; }
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: white;
+  display: inline-block;
+  padding-right: 5px;
+  background: black; }
+
+.footer-distributed .footer-links .link-1:before {
+  content: none; }
+
+/* Footer Right */
+.footer-distributed .footer-right {
+  width: 20%; }
+
+.footer-distributed .footer-company-about {
+  line-height: 12px;
+  color: #92999f;
+  font-size: 11px;
+  font-weight: normal;
+  margin: 0;
+  background: black; }
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: black; }
+
+.footer-distributed .footer-icons {
+  margin-top: 25px; }
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif; }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center; }
+  .footer-distributed .footer-center i {
+    margin-left: 0; } }
+
+/* Footer end */
 * {
   margin: 0;
   padding: 0;
@@ -228,10 +366,6 @@ nav {
   font-size: 12px;
   font-family: Arial; }
 
-header {
-  padding: 10px 0;
-  margin-bottom: 30px; }
-
 #logo {
   text-align: left;
   margin-bottom: 0px; }
@@ -313,16 +447,6 @@ table td.grand {
   color: #5d6975;
   font-size: 1.2em; }
 
-footer {
-  color: #5d6975;
-  width: 100%;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  border-top: 1px solid #c1ced9;
-  padding: 8px 0;
-  text-align: center; }
-
 body {
   margin: 0;
   padding: 0;
@@ -398,7 +522,7 @@ h6 {
   font-family: "Montserrat", sans-serif; }
 
 .bg-image {
-  background-image: url("/Images/laptop.jpg"); }
+  background-image: url("images/laptop.jpg"); }
 
 /*Priskort med köpknapp*/
 .pricing-table {
@@ -481,6 +605,72 @@ h6 {
   top: 16px;
   right: -36px; }
 
+#btn-bas {
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: 0.5s linear;
+  cursor: pointer;
+  width: 70%; }
+
+#btn-bas:hover {
+  background: #00c900;
+  color: #fff; }
+
+#btn-bas a:hover {
+  background: #00c900;
+  color: #fff; }
+
+#btn-medium {
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: 0.5s linear;
+  cursor: pointer;
+  width: 70%; }
+
+#btn-medium:hover {
+  background: #00c900;
+  color: #fff; }
+
+#btn-medium a:hover {
+  background: #00c900;
+  color: #fff; }
+
+#btn-lyx {
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: 0.5s linear;
+  width: 70%;
+  cursor: pointer; }
+
+#btn-lyx:hover {
+  background: #00c900;
+  color: #fff; }
+
+#btn-lyx a:hover {
+  background: #00c900;
+  color: #fff; }
+
 /*Rutor till övriga tjänster*/
 .serviceboxes {
   display: grid;
@@ -552,7 +742,7 @@ p {
 
 #showcase .bg-image {
   position: absolute;
-  background-image: url("/Images/laptop2.jpg");
+  background-image: url("images/laptop2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -615,14 +805,7 @@ p {
   color: #333;
   padding: 5em; }
 
-/* Footer */
-#main-footer {
-  padding: 2em;
-  background: #000;
-  color: #fff;
-  text-align: center; }
-
-#main-footer a {
+#main-footerr a {
   color: white;
   text-decoration: none; }
 
@@ -640,11 +823,145 @@ p {
   #section-b ul {
     grid-column: 2/4; }
   .box,
-  #main-footer div {
+  #main-footerr div {
     grid-column: span 2; }
   #section-b ul {
     display: flex;
     justify-content: space-around; } }
+
+/* Beställningsinfo kassasidan*/
+.kassa-container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 200px auto auto auto;
+  grid-template-columns: minmax(160px 160px 160px auto);
+  grid-gap: 20px;
+  background-color: #d4f7a0;
+  padding: 30px;
+  height: 150vh;
+  margin-top: 70px;
+  grid-template-areas: "order order order side" "offer-1 offer-2 offer-3 side" "offerings offerings offerings side" "offerings offerings offerings side" "foot foot foot side"; }
+
+.orderbox {
+  grid-area: order;
+  grid-template-columns: 150px auto 100px;
+  background-color: #e9ae0d;
+  color: black;
+  padding: 10px;
+  min-height: 200px; }
+
+.orderlist {
+  grid-area: order;
+  color: black;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2; }
+
+.pricebar {
+  grid-area: side;
+  background-color: rgba(5, 114, 2, 0.678);
+  padding: 10px;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); }
+
+.offerbox-1 {
+  grid-area: offer-1;
+  background-color: #00c900;
+  padding: 10px;
+  min-height: 160;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  line-height: 0.7;
+  text-transform: uppercase; }
+
+.offerbox-2 {
+  grid-area: offer-2;
+  background-color: rgba(205, 247, 204, 0.89);
+  padding: 10px;
+  min-height: 160;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  line-height: 0.7;
+  text-transform: uppercase; }
+
+.offerbox-3 {
+  grid-area: offer-3;
+  background-color: #00c900;
+  padding: 10px;
+  min-height: 160;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  line-height: 0.7;
+  text-transform: uppercase; }
+
+.offerbox i {
+  color: #8eee8e; }
+
+.offerbox-1:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  background-color: rgba(205, 247, 204, 0.89); }
+
+.offerbox-2:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  background-color: #555455; }
+
+.offerbox-3:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  background-color: rgba(205, 247, 204, 0.89); }
+
+.delete-order-btn {
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  transition: 0.5s linear;
+  width: 30%;
+  cursor: pointer; }
+
+.offer-price {
+  font-size: 1.5rem;
+  align-content: center;
+  font-family: Impact, sans-serif;
+  color: #787e7b; }
+
+.offer-pg {
+  font-size: 1rem;
+  align-content: center;
+  color: black;
+  text-transform: uppercase; }
+
+.kassaorder {
+  list-style: none;
+  color: black; }
+
+/*Rutor för att kryssa i extratjänster*/
+.offerings {
+  grid-area: offerings;
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+  background-color: rgba(187, 248, 187, 0.89);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.3rem; }
+
+.offerings-rows {
+  grid-gap: 10px;
+  background-color: #bebebe;
+  border-radius: 3px;
+  justify-content: right;
+  padding: 5px; }
 
 .kassa-container {
   justify-content: space-evenly;

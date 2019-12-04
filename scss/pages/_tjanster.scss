@@ -24,7 +24,7 @@ h6 {
 }
 
 .bg-image {
-  background-image: url("/Images/laptop.jpg");
+  background-image: url("images/laptop.jpg");
 }
 
 /*Priskort med köpknapp*/
@@ -120,6 +120,81 @@ h6 {
   right: -36px;
 }
 
+#btn-bas {
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: 0.5s linear;
+  cursor: pointer;
+  width: 70%;
+}
+
+#btn-bas:hover {
+  background: #00c900;
+  color: #fff;
+}
+
+#btn-bas a:hover {
+  background: #00c900;
+  color: #fff;
+}
+
+#btn-medium {
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: 0.5s linear;
+  cursor: pointer;
+  width: 70%;
+}
+
+#btn-medium:hover {
+  background: #00c900;
+  color: #fff;
+}
+
+#btn-medium a:hover {
+  background: #00c900;
+  color: #fff;
+}
+
+#btn-lyx {
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 2px solid #00c900;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: 0.5s linear;
+  width: 70%;
+  cursor: pointer;
+}
+
+#btn-lyx:hover {
+  background: #00c900;
+  color: #fff;
+}
+
+#btn-lyx a:hover {
+  background: #00c900;
+  color: #fff;
+}
+
 /*Rutor till övriga tjänster*/
 .serviceboxes {
   display: grid;
@@ -203,7 +278,7 @@ p {
 
 #showcase .bg-image {
   position: absolute;
-  background-image: url("/Images/laptop2.jpg");
+  background-image: url("images/laptop2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -278,15 +353,7 @@ p {
   padding: 5em;
 }
 
-/* Footer */
-#main-footer {
-  padding: 2em;
-  background: #000;
-  color: #fff;
-  text-align: center;
-}
-
-#main-footer a {
+#main-footerr a {
   color: white;
   text-decoration: none;
 }
@@ -309,7 +376,7 @@ p {
     grid-column: 2/4;
   }
   .box,
-  #main-footer div {
+  #main-footerr div {
     grid-column: span 2;
   }
   #section-b ul {
@@ -340,9 +407,11 @@ p {
 
 .orderbox {
   grid-area: order;
+  grid-template-columns: 150px auto 100px;
   background-color: rgb(233, 174, 13);
   color: black;
   padding: 10px;
+  min-height: 200px;
 }
 
 .orderlist {
@@ -396,7 +465,7 @@ p {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -o-transform: scale(1.05);
-  +-ms-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   background-color: rgba(205, 247, 204, 0.89);
 }
 
@@ -405,16 +474,30 @@ p {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -o-transform: scale(1.05);
-  +-ms-transform: scale(1.05);
-  background-color: #55545;
+  -ms-transform: scale(1.05);
+  background-color: #555455;
 }
 .offerbox-3:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -o-transform: scale(1.05);
-  +-ms-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   background-color: rgba(205, 247, 204, 0.89);
+}
+
+.delete-order-btn {
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  transition: 0.5s linear;
+  width: 30%;
+  cursor: pointer;
 }
 
 .offer-price {
@@ -423,7 +506,6 @@ p {
   font-family: Impact, sans-serif;
   color: #787e7b;
 }
-
 .offer-pg {
   font-size: 1rem;
   align-content: center;
@@ -434,17 +516,6 @@ p {
 .kassaorder {
   list-style: none;
   color: black;
-}
-
-.foot {
-  grid-area: foot;
-  width: 100%;
-  background-color: rgba(8, 8, 8, 0.89);
-  padding: 10px;
-  color: white;
-  position: fixed;
-  left: 0;
-  bottom: 0;
 }
 
 /*Rutor för att kryssa i extratjänster*/
@@ -463,18 +534,4 @@ p {
   border-radius: 3px;
   justify-content: right;
   padding: 5px;
-}
-
-.largerCheckbox {
-  width: 35px;
-  height: 35px;
-  border: 1px solid green;
-  border-radius: 3px;
-}
-
-input.largerCheckbox {
-  width: 35px;
-  height: 35px;
-  border: 1px solid green;
-  border-radius: 3px;
 }
